@@ -1,0 +1,1875 @@
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://ws.checkout.credibanco.pharos.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="CheckoutWSServiceService" targetNamespace="http://ws.checkout.credibanco.pharos.com/">
+<wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ws.checkout.credibanco.pharos.com/" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://ws.checkout.credibanco.pharos.com/">
+<xs:element name="activateCard" type="tns:activateCard"/>
+<xs:element name="activateCardResponse" type="tns:activateCardResponse"/>
+<xs:element name="activateSession" type="tns:activateSession"/>
+<xs:element name="activateSessionResponse" type="tns:activateSessionResponse"/>
+<xs:element name="activateuser" type="tns:activateuser"/>
+<xs:element name="activateuserResponse" type="tns:activateuserResponse"/>
+<xs:element name="addAudit" type="tns:addAudit"/>
+<xs:element name="addAuditResponse" type="tns:addAuditResponse"/>
+<xs:element name="addCard" type="tns:addCard"/>
+<xs:element name="addCardResponse" type="tns:addCardResponse"/>
+<xs:element name="addFirstCard" type="tns:addFirstCard"/>
+<xs:element name="addFirstCardResponse" type="tns:addFirstCardResponse"/>
+<xs:element name="authenticateUser" type="tns:authenticateUser"/>
+<xs:element name="authenticateUserResponse" type="tns:authenticateUserResponse"/>
+<xs:element name="changePassword" type="tns:changePassword"/>
+<xs:element name="changePasswordResponse" type="tns:changePasswordResponse"/>
+<xs:element name="completeUser" type="tns:completeUser"/>
+<xs:element name="completeUserResponse" type="tns:completeUserResponse"/>
+<xs:element name="createCertificate" type="tns:createCertificate"/>
+<xs:element name="createCertificateResponse" type="tns:createCertificateResponse"/>
+<xs:element name="createCommerce" type="tns:createCommerce"/>
+<xs:element name="createCommerceResponse" type="tns:createCommerceResponse"/>
+<xs:element name="createUser" type="tns:createUser"/>
+<xs:element name="createUserResponse" type="tns:createUserResponse"/>
+<xs:element name="deleteCard" type="tns:deleteCard"/>
+<xs:element name="deleteCardResponse" type="tns:deleteCardResponse"/>
+<xs:element name="deleteCertificate" type="tns:deleteCertificate"/>
+<xs:element name="deleteCertificateResponse" type="tns:deleteCertificateResponse"/>
+<xs:element name="deleteCommerce" type="tns:deleteCommerce"/>
+<xs:element name="deleteCommerceResponse" type="tns:deleteCommerceResponse"/>
+<xs:element name="deleteUser" type="tns:deleteUser"/>
+<xs:element name="deleteUserResponse" type="tns:deleteUserResponse"/>
+<xs:element name="deleteUserSession" type="tns:deleteUserSession"/>
+<xs:element name="deleteUserSessionResponse" type="tns:deleteUserSessionResponse"/>
+<xs:element name="editCertificate" type="tns:editCertificate"/>
+<xs:element name="editCertificateResponse" type="tns:editCertificateResponse"/>
+<xs:element name="editCommerce" type="tns:editCommerce"/>
+<xs:element name="editCommerceResponse" type="tns:editCommerceResponse"/>
+<xs:element name="findAllCertificates" type="tns:findAllCertificates"/>
+<xs:element name="findAllCertificatesResponse" type="tns:findAllCertificatesResponse"/>
+<xs:element name="findCertificateByCodCommerce" type="tns:findCertificateByCodCommerce"/>
+<xs:element name="findCertificateByCodCommerceResponse" type="tns:findCertificateByCodCommerceResponse"/>
+<xs:element name="getAudit" type="tns:getAudit"/>
+<xs:element name="getAuditActions" type="tns:getAuditActions"/>
+<xs:element name="getAuditActionsResponse" type="tns:getAuditActionsResponse"/>
+<xs:element name="getAuditResponse" type="tns:getAuditResponse"/>
+<xs:element name="getCiudadesDane" type="tns:getCiudadesDane"/>
+<xs:element name="getCiudadesDaneResponse" type="tns:getCiudadesDaneResponse"/>
+<xs:element name="getCommerce" type="tns:getCommerce"/>
+<xs:element name="getCommerceApiToken" type="tns:getCommerceApiToken"/>
+<xs:element name="getCommerceApiTokenResponse" type="tns:getCommerceApiTokenResponse"/>
+<xs:element name="getCommerceResponse" type="tns:getCommerceResponse"/>
+<xs:element name="getFaqList" type="tns:getFaqList"/>
+<xs:element name="getFaqListResponse" type="tns:getFaqListResponse"/>
+<xs:element name="getFavoriteCard" type="tns:getFavoriteCard"/>
+<xs:element name="getFavoriteCardResponse" type="tns:getFavoriteCardResponse"/>
+<xs:element name="getFranchiseByBinRange" type="tns:getFranchiseByBinRange"/>
+<xs:element name="getFranchiseByBinRangeResponse" type="tns:getFranchiseByBinRangeResponse"/>
+<xs:element name="getParameterByName" type="tns:getParameterByName"/>
+<xs:element name="getParameterByNameResponse" type="tns:getParameterByNameResponse"/>
+<xs:element name="getRestoreSession" type="tns:getRestoreSession"/>
+<xs:element name="getRestoreSessionResponse" type="tns:getRestoreSessionResponse"/>
+<xs:element name="getUser" type="tns:getUser"/>
+<xs:element name="getUserByDoc" type="tns:getUserByDoc"/>
+<xs:element name="getUserByDocResponse" type="tns:getUserByDocResponse"/>
+<xs:element name="getUserCards" type="tns:getUserCards"/>
+<xs:element name="getUserCardsResponse" type="tns:getUserCardsResponse"/>
+<xs:element name="getUserResponse" type="tns:getUserResponse"/>
+<xs:element name="pay" type="tns:pay"/>
+<xs:element name="payResponse" type="tns:payResponse"/>
+<xs:element name="postPago" type="tns:postPago"/>
+<xs:element name="postPagoResponse" type="tns:postPagoResponse"/>
+<xs:element name="restoreLinkPassword" type="tns:restoreLinkPassword"/>
+<xs:element name="restoreLinkPasswordResponse" type="tns:restoreLinkPasswordResponse"/>
+<xs:element name="restorePassword" type="tns:restorePassword"/>
+<xs:element name="restorePasswordResponse" type="tns:restorePasswordResponse"/>
+<xs:element name="sendCreateEmail" type="tns:sendCreateEmail"/>
+<xs:element name="sendCreateEmailResponse" type="tns:sendCreateEmailResponse"/>
+<xs:element name="sendOTPEmail" type="tns:sendOTPEmail"/>
+<xs:element name="sendOTPEmailResponse" type="tns:sendOTPEmailResponse"/>
+<xs:element name="sendOTPLoginEmail" type="tns:sendOTPLoginEmail"/>
+<xs:element name="sendOTPLoginEmailResponse" type="tns:sendOTPLoginEmailResponse"/>
+<xs:element name="setCard2Receive" type="tns:setCard2Receive"/>
+<xs:element name="setCard2ReceiveResponse" type="tns:setCard2ReceiveResponse"/>
+<xs:element name="setFavoriteCard" type="tns:setFavoriteCard"/>
+<xs:element name="setFavoriteCardResponse" type="tns:setFavoriteCardResponse"/>
+<xs:element name="setOTP" type="tns:setOTP"/>
+<xs:element name="setOTPLogin" type="tns:setOTPLogin"/>
+<xs:element name="setOTPLoginResponse" type="tns:setOTPLoginResponse"/>
+<xs:element name="setOTPResponse" type="tns:setOTPResponse"/>
+<xs:element name="updateCardAlias" type="tns:updateCardAlias"/>
+<xs:element name="updateCardAliasResponse" type="tns:updateCardAliasResponse"/>
+<xs:element name="updateRegisterDate" type="tns:updateRegisterDate"/>
+<xs:element name="updateRegisterDateResponse" type="tns:updateRegisterDateResponse"/>
+<xs:element name="updateTrx" type="tns:updateTrx"/>
+<xs:element name="updateTrxResponse" type="tns:updateTrxResponse"/>
+<xs:element name="updateUserData" type="tns:updateUserData"/>
+<xs:element name="updateUserDataResponse" type="tns:updateUserDataResponse"/>
+<xs:element name="validSession" type="tns:validSession"/>
+<xs:element name="validSessionResponse" type="tns:validSessionResponse"/>
+<xs:element name="validateOTP" type="tns:validateOTP"/>
+<xs:element name="validateOTPLogin" type="tns:validateOTPLogin"/>
+<xs:element name="validateOTPLoginResponse" type="tns:validateOTPLoginResponse"/>
+<xs:element name="validateOTPResponse" type="tns:validateOTPResponse"/>
+<xs:element name="validateUser" type="tns:validateUser"/>
+<xs:element name="validateUserResponse" type="tns:validateUserResponse"/>
+<xs:complexType name="deleteCommerce">
+<xs:sequence>
+<xs:element minOccurs="0" name="commerceCode" type="xs:string"/>
+<xs:element minOccurs="0" name="terminalCode" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="deleteCommerceResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:response"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="response">
+<xs:sequence>
+<xs:element minOccurs="0" name="estado" type="xs:string"/>
+<xs:element minOccurs="0" name="mensaje" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="updateRegisterDate">
+<xs:sequence>
+<xs:element minOccurs="0" name="email" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="updateRegisterDateResponse">
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="restorePassword">
+<xs:sequence>
+<xs:element minOccurs="0" name="email" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="restorePasswordResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:responseRestore"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="responseRestore">
+<xs:sequence>
+<xs:element minOccurs="0" name="email" type="xs:string"/>
+<xs:element minOccurs="0" name="estado" type="xs:string"/>
+<xs:element minOccurs="0" name="mensaje" type="xs:string"/>
+<xs:element minOccurs="0" name="sessionId" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="findAllCertificates">
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="findAllCertificatesResponse">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:certificates"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="certificates">
+<xs:sequence>
+<xs:element name="acceptInternationalCards" type="xs:boolean"/>
+<xs:element minOccurs="0" name="certificateName" type="xs:string"/>
+<xs:element minOccurs="0" name="certificatePassword" type="xs:string"/>
+<xs:element minOccurs="0" name="commerceCode" type="xs:string"/>
+<xs:element minOccurs="0" name="commerceName" type="xs:string"/>
+<xs:element minOccurs="0" name="commerceTerminalCode" type="xs:string"/>
+<xs:element name="id" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="sendCreateEmail">
+<xs:sequence>
+<xs:element minOccurs="0" name="User" type="tns:user"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="user">
+<xs:sequence>
+<xs:element minOccurs="0" name="address" type="xs:string"/>
+<xs:element minOccurs="0" name="birthdate" type="xs:dateTime"/>
+<xs:element minOccurs="0" name="cellphone" type="xs:string"/>
+<xs:element minOccurs="0" name="city" type="xs:string"/>
+<xs:element minOccurs="0" name="confirmacionClave" type="xs:string"/>
+<xs:element minOccurs="0" name="countInvalid" type="xs:int"/>
+<xs:element minOccurs="0" name="country" type="xs:string"/>
+<xs:element minOccurs="0" name="documentNumber" type="xs:string"/>
+<xs:element minOccurs="0" name="email" type="xs:string"/>
+<xs:element minOccurs="0" name="enableQ" type="xs:string"/>
+<xs:element minOccurs="0" name="expDocumentDate" type="xs:string"/>
+<xs:element minOccurs="0" name="firstName" type="xs:string"/>
+<xs:element minOccurs="0" name="gender" type="xs:string"/>
+<xs:element minOccurs="0" name="interestAuto" type="xs:boolean"/>
+<xs:element minOccurs="0" name="interestBeauty" type="xs:boolean"/>
+<xs:element minOccurs="0" name="interestClothes" type="xs:boolean"/>
+<xs:element minOccurs="0" name="interestElectronics" type="xs:boolean"/>
+<xs:element minOccurs="0" name="interestHome" type="xs:boolean"/>
+<xs:element minOccurs="0" name="interestOther" type="xs:string"/>
+<xs:element minOccurs="0" name="interestTelco" type="xs:boolean"/>
+<xs:element minOccurs="0" name="interestTravel" type="xs:boolean"/>
+<xs:element minOccurs="0" name="lastName" type="xs:string"/>
+<xs:element minOccurs="0" name="locked" type="xs:string"/>
+<xs:element minOccurs="0" name="maritalStatus" type="xs:string"/>
+<xs:element name="openSession" type="xs:int"/>
+<xs:element minOccurs="0" name="otp" type="xs:string"/>
+<xs:element minOccurs="0" name="otpExpiration" type="xs:dateTime"/>
+<xs:element minOccurs="0" name="otpLogin" type="xs:string"/>
+<xs:element minOccurs="0" name="otpLoginExpiration" type="xs:dateTime"/>
+<xs:element name="otpLoginTries" type="xs:int"/>
+<xs:element name="otpTries" type="xs:int"/>
+<xs:element minOccurs="0" name="password" type="xs:string"/>
+<xs:element minOccurs="0" name="passwordDate" type="xs:dateTime"/>
+<xs:element minOccurs="0" name="registerDate" type="xs:dateTime"/>
+<xs:element minOccurs="0" name="registerEnable" type="xs:string"/>
+<xs:element minOccurs="0" name="secondLastName" type="xs:string"/>
+<xs:element minOccurs="0" name="secondName" type="xs:string"/>
+<xs:element minOccurs="0" name="sessionid" type="xs:string"/>
+<xs:element name="trxVal" type="xs:int"/>
+<xs:element minOccurs="0" name="tyc" type="xs:string"/>
+<xs:element minOccurs="0" name="userType" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="sendCreateEmailResponse">
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="editCertificate">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="tns:certificates"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="editCertificateResponse">
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="addFirstCard">
+<xs:sequence>
+<xs:element minOccurs="0" name="email" type="xs:string"/>
+<xs:element minOccurs="0" name="documentType" type="xs:string"/>
+<xs:element minOccurs="0" name="documentNumber" type="xs:string"/>
+<xs:element minOccurs="0" name="cardNumber" type="xs:string"/>
+<xs:element minOccurs="0" name="counter" type="xs:string"/>
+<xs:element minOccurs="0" name="alias" type="xs:string"/>
+<xs:element minOccurs="0" name="validDate" type="xs:dateTime"/>
+<xs:element minOccurs="0" name="franchise" type="xs:string"/>
+<xs:element minOccurs="0" name="state" type="xs:string"/>
+<xs:element minOccurs="0" name="micro1" type="xs:string"/>
+<xs:element minOccurs="0" name="micro2" type="xs:string"/>
+<xs:element name="international" type="xs:boolean"/>
+<xs:element minOccurs="0" name="accountType" type="xs:string"/>
+<xs:element name="receiveEnable" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="addFirstCardResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:response"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getAuditActions">
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="getAuditActionsResponse">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getAudit">
+<xs:sequence>
+<xs:element minOccurs="0" name="startDate" type="xs:dateTime"/>
+<xs:element minOccurs="0" name="endDate" type="xs:dateTime"/>
+<xs:element minOccurs="0" name="action" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getAuditResponse">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:audit"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="audit">
+<xs:sequence>
+<xs:element minOccurs="0" name="action" type="xs:string"/>
+<xs:element minOccurs="0" name="auditDate" type="xs:dateTime"/>
+<xs:element minOccurs="0" name="description" type="xs:string"/>
+<xs:element minOccurs="0" name="email" type="xs:string"/>
+<xs:element name="id" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="addAudit">
+<xs:sequence>
+<xs:element minOccurs="0" name="auditoria" type="tns:audit"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="addAuditResponse">
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="updateUserData">
+<xs:sequence>
+<xs:element minOccurs="0" name="documentType" type="xs:string"/>
+<xs:element minOccurs="0" name="documentNumber" type="xs:string"/>
+<xs:element minOccurs="0" name="email" type="xs:string"/>
+<xs:element minOccurs="0" name="firstName" type="xs:string"/>
+<xs:element minOccurs="0" name="secondName" type="xs:string"/>
+<xs:element minOccurs="0" name="lastName" type="xs:string"/>
+<xs:element minOccurs="0" name="secondLastName" type="xs:string"/>
+<xs:element minOccurs="0" name="password" type="xs:string"/>
+<xs:element minOccurs="0" name="newPassword" type="xs:string"/>
+<xs:element minOccurs="0" name="confirmNewPassword" type="xs:string"/>
+<xs:element minOccurs="0" name="address" type="xs:string"/>
+<xs:element minOccurs="0" name="city" type="xs:string"/>
+<xs:element minOccurs="0" name="country" type="xs:string"/>
+<xs:element minOccurs="0" name="cellphone" type="xs:string"/>
+<xs:element minOccurs="0" name="enableQ" type="xs:string"/>
+<xs:element minOccurs="0" name="expDocumentDate" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="updateUserDataResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:response"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="deleteUserSession">
+<xs:sequence>
+<xs:element minOccurs="0" name="email" type="xs:string"/>
+<xs:element minOccurs="0" name="session" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="deleteUserSessionResponse">
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="sendOTPEmail">
+<xs:sequence>
+<xs:element minOccurs="0" name="email" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="sendOTPEmailResponse">
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="createCertificate">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="tns:certificates"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="createCertificateResponse">
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="editCommerce">
+<xs:sequence>
+<xs:element minOccurs="0" name="commerceCode" type="xs:string"/>
+<xs:element minOccurs="0" name="certificateName" type="xs:string"/>
+<xs:element minOccurs="0" name="commerceName" type="xs:string"/>
+<xs:element minOccurs="0" name="certificatePassword" type="xs:string"/>
+<xs:element minOccurs="0" name="commerceTerminalCode" type="xs:string"/>
+<xs:element minOccurs="0" name="certFile" type="xs:base64Binary"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="editCommerceResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:response"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="sendOTPLoginEmail">
+<xs:sequence>
+<xs:element minOccurs="0" name="email" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="sendOTPLoginEmailResponse">
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="deleteUser">
+<xs:sequence>
+<xs:element minOccurs="0" name="email" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="deleteUserResponse">
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="completeUser">
+<xs:sequence>
+<xs:element minOccurs="0" name="User" type="tns:user"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="completeUserResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:response"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="authenticateUser">
+<xs:sequence>
+<xs:element minOccurs="0" name="email" type="xs:string"/>
+<xs:element minOccurs="0" name="password" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="authenticateUserResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:response"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getUserCards">
+<xs:sequence>
+<xs:element minOccurs="0" name="documentNumber" type="xs:string"/>
+<xs:element minOccurs="0" name="auditoria" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getUserCardsResponse">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:userCard"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="userCard">
+<xs:sequence>
+<xs:element minOccurs="0" name="accountType" type="xs:string"/>
+<xs:element minOccurs="0" name="alias" type="xs:string"/>
+<xs:element minOccurs="0" name="bin" type="xs:string"/>
+<xs:element minOccurs="0" name="cardNumber" type="xs:string"/>
+<xs:element minOccurs="0" name="counter" type="xs:string"/>
+<xs:element minOccurs="0" name="documentNumber" type="xs:string"/>
+<xs:element name="favorite" type="xs:boolean"/>
+<xs:element name="favoriteToReceive" type="xs:boolean"/>
+<xs:element minOccurs="0" name="franchise" type="xs:string"/>
+<xs:element minOccurs="0" name="hashedCard" type="xs:string"/>
+<xs:element name="id" type="xs:long"/>
+<xs:element name="internationalCard" type="xs:boolean"/>
+<xs:element minOccurs="0" name="lastCard" type="xs:string"/>
+<xs:element name="lastPurchaseDues" type="xs:int"/>
+<xs:element name="micro1" type="xs:long"/>
+<xs:element name="micro2" type="xs:long"/>
+<xs:element minOccurs="0" name="state" type="xs:string"/>
+<xs:element minOccurs="0" name="validDate" type="xs:dateTime"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRestoreSession">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getRestoreSessionResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:restoreSession"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="restoreSession">
+<xs:sequence>
+<xs:element minOccurs="0" name="email" type="xs:string"/>
+<xs:element minOccurs="0" name="sessionId" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getUserByDoc">
+<xs:sequence>
+<xs:element minOccurs="0" name="docNumber" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getUserByDocResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:user"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getCommerceApiToken">
+<xs:sequence>
+<xs:element minOccurs="0" name="uniqueCode" type="xs:string"/>
+<xs:element minOccurs="0" name="terminalCode" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getCommerceApiTokenResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="pay">
+<xs:sequence>
+<xs:element minOccurs="0" name="xml" type="xs:string"/>
+<xs:element minOccurs="0" name="alias" type="xs:string"/>
+<xs:element minOccurs="0" name="quotas" type="xs:string"/>
+<xs:element minOccurs="0" name="cardNumber" type="xs:string"/>
+<xs:element minOccurs="0" name="email" type="xs:string"/>
+<xs:element minOccurs="0" name="validDate" type="xs:string"/>
+<xs:element minOccurs="0" name="franchise" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="payResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:response"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="setOTPLogin">
+<xs:sequence>
+<xs:element minOccurs="0" name="email" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="setOTPLoginResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:response"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="findCertificateByCodCommerce">
+<xs:sequence>
+<xs:element minOccurs="0" name="uniqueCode" type="xs:string"/>
+<xs:element minOccurs="0" name="terminalCode" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="findCertificateByCodCommerceResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:certificates"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getCommerce">
+<xs:sequence>
+<xs:element minOccurs="0" name="commerceCode" type="xs:string"/>
+<xs:element minOccurs="0" name="terminalCode" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getCommerceResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:certificates"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getCiudadesDane">
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="getCiudadesDaneResponse">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="deleteCertificate">
+<xs:sequence>
+<xs:element name="arg0" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="deleteCertificateResponse">
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="setCard2Receive">
+<xs:sequence>
+<xs:element minOccurs="0" name="documentNumber" type="xs:string"/>
+<xs:element name="id" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="setCard2ReceiveResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:response"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="addCard">
+<xs:sequence>
+<xs:element minOccurs="0" name="email" type="xs:string"/>
+<xs:element minOccurs="0" name="documentType" type="xs:string"/>
+<xs:element minOccurs="0" name="documentNumber" type="xs:string"/>
+<xs:element minOccurs="0" name="cardNumber" type="xs:string"/>
+<xs:element minOccurs="0" name="counter" type="xs:string"/>
+<xs:element minOccurs="0" name="alias" type="xs:string"/>
+<xs:element minOccurs="0" name="validDate" type="xs:dateTime"/>
+<xs:element minOccurs="0" name="franchise" type="xs:string"/>
+<xs:element minOccurs="0" name="state" type="xs:string"/>
+<xs:element minOccurs="0" name="micro1" type="xs:string"/>
+<xs:element minOccurs="0" name="micro2" type="xs:string"/>
+<xs:element name="international" type="xs:boolean"/>
+<xs:element minOccurs="0" name="accountType" type="xs:string"/>
+<xs:element name="receiveEnable" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="addCardResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:response"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="validateOTP">
+<xs:sequence>
+<xs:element minOccurs="0" name="email" type="xs:string"/>
+<xs:element minOccurs="0" name="otp" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="validateOTPResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:response"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="setFavoriteCard">
+<xs:sequence>
+<xs:element minOccurs="0" name="documentNumber" type="xs:string"/>
+<xs:element name="id" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="setFavoriteCardResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:response"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getUser">
+<xs:sequence>
+<xs:element minOccurs="0" name="email" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getUserResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:user"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="postPago">
+<xs:sequence>
+<xs:element minOccurs="0" name="posPago" type="tns:posPago"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="posPago">
+<xs:sequence>
+<xs:element minOccurs="0" name="commerceCode" type="xs:string"/>
+<xs:element minOccurs="0" name="commerceTerminalCode" type="xs:string"/>
+<xs:element minOccurs="0" name="documentNumber" type="xs:string"/>
+<xs:element minOccurs="0" name="id" type="xs:decimal"/>
+<xs:element minOccurs="0" name="idTrx" type="xs:string"/>
+<xs:element minOccurs="0" name="selectedAlias" type="xs:string"/>
+<xs:element name="selectedQuotas" type="xs:long"/>
+<xs:element minOccurs="0" name="trxInfo" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="postPagoResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:response"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="validateOTPLogin">
+<xs:sequence>
+<xs:element minOccurs="0" name="email" type="xs:string"/>
+<xs:element minOccurs="0" name="otp" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="validateOTPLoginResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:response"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="updateCardAlias">
+<xs:sequence>
+<xs:element name="id" type="xs:long"/>
+<xs:element minOccurs="0" name="alias" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="updateCardAliasResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:response"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getFranchiseByBinRange">
+<xs:sequence>
+<xs:element name="range" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getFranchiseByBinRangeResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:binesRange"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="binesRange">
+<xs:sequence>
+<xs:element name="endBin" type="xs:long"/>
+<xs:element minOccurs="0" name="franchise" type="xs:string"/>
+<xs:element name="international" type="xs:boolean"/>
+<xs:element name="startBin" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="deleteCard">
+<xs:sequence>
+<xs:element minOccurs="0" name="email" type="xs:string"/>
+<xs:element minOccurs="0" name="alias" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="deleteCardResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:response"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getFavoriteCard">
+<xs:sequence>
+<xs:element minOccurs="0" name="documentNumber" type="xs:string"/>
+<xs:element minOccurs="0" name="auditoria" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getFavoriteCardResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:userCard"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="createUser">
+<xs:sequence>
+<xs:element minOccurs="0" name="User" type="tns:user"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="createUserResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:response"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getFaqList">
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="getFaqListResponse">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:faq"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="faq">
+<xs:sequence>
+<xs:element minOccurs="0" name="answer" type="xs:string"/>
+<xs:element name="idQuestion" type="xs:int"/>
+<xs:element minOccurs="0" name="question" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="validateUser">
+<xs:sequence>
+<xs:element minOccurs="0" name="User" type="tns:user"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="validateUserResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:response"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="changePassword">
+<xs:sequence>
+<xs:element minOccurs="0" name="email" type="xs:string"/>
+<xs:element minOccurs="0" name="oldPassword" type="xs:string"/>
+<xs:element minOccurs="0" name="newPassword" type="xs:string"/>
+<xs:element minOccurs="0" name="confirmNewPassword" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="changePasswordResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:response"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="validSession">
+<xs:sequence>
+<xs:element minOccurs="0" name="email" type="xs:string"/>
+<xs:element minOccurs="0" name="session" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="validSessionResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:response"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getParameterByName">
+<xs:sequence>
+<xs:element minOccurs="0" name="nombre" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getParameterByNameResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:parameter"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="parameter">
+<xs:sequence>
+<xs:element name="id" type="xs:long"/>
+<xs:element minOccurs="0" name="name" type="xs:string"/>
+<xs:element minOccurs="0" name="value" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="setOTP">
+<xs:sequence>
+<xs:element minOccurs="0" name="email" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="setOTPResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:response"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="restoreLinkPassword">
+<xs:sequence>
+<xs:element minOccurs="0" name="email" type="xs:string"/>
+<xs:element minOccurs="0" name="newPassword" type="xs:string"/>
+<xs:element minOccurs="0" name="confirmNewPassword" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="restoreLinkPasswordResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:response"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="activateuser">
+<xs:sequence>
+<xs:element minOccurs="0" name="email" type="xs:string"/>
+<xs:element minOccurs="0" name="session" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="activateuserResponse">
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="activateSession">
+<xs:sequence>
+<xs:element minOccurs="0" name="email" type="xs:string"/>
+<xs:element minOccurs="0" name="session" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="activateSessionResponse">
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="createCommerce">
+<xs:sequence>
+<xs:element minOccurs="0" name="commerceCode" type="xs:string"/>
+<xs:element minOccurs="0" name="certificateName" type="xs:string"/>
+<xs:element minOccurs="0" name="commerceName" type="xs:string"/>
+<xs:element minOccurs="0" name="certificatePassword" type="xs:string"/>
+<xs:element minOccurs="0" name="commerceTerminalCode" type="xs:string"/>
+<xs:element minOccurs="0" name="certFile" type="xs:base64Binary"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="createCommerceResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:response"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="updateTrx">
+<xs:sequence>
+<xs:element minOccurs="0" name="User" type="tns:user"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="updateTrxResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:response"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="activateCard">
+<xs:sequence>
+<xs:element minOccurs="0" name="email" type="xs:string"/>
+<xs:element name="idCard" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="activateCardResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:response"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="Exception" type="tns:Exception"/>
+<xs:complexType name="Exception">
+<xs:sequence>
+<xs:element minOccurs="0" name="message" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
+</wsdl:types>
+<wsdl:message name="restorePasswordResponse">
+<wsdl:part element="tns:restorePasswordResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="validSessionResponse">
+<wsdl:part element="tns:validSessionResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="deleteCommerce">
+<wsdl:part element="tns:deleteCommerce" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="updateRegisterDate">
+<wsdl:part element="tns:updateRegisterDate" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="sendCreateEmail">
+<wsdl:part element="tns:sendCreateEmail" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="editCertificate">
+<wsdl:part element="tns:editCertificate" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getUserByDocResponse">
+<wsdl:part element="tns:getUserByDocResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getAudit">
+<wsdl:part element="tns:getAudit" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="updateRegisterDateResponse">
+<wsdl:part element="tns:updateRegisterDateResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="addAudit">
+<wsdl:part element="tns:addAudit" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="updateUserData">
+<wsdl:part element="tns:updateUserData" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="validateUserResponse">
+<wsdl:part element="tns:validateUserResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="sendOTPEmail">
+<wsdl:part element="tns:sendOTPEmail" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getAuditActionsResponse">
+<wsdl:part element="tns:getAuditActionsResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="addAuditResponse">
+<wsdl:part element="tns:addAuditResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getCommerceApiTokenResponse">
+<wsdl:part element="tns:getCommerceApiTokenResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="deleteUser">
+<wsdl:part element="tns:deleteUser" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="updateUserDataResponse">
+<wsdl:part element="tns:updateUserDataResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getFaqListResponse">
+<wsdl:part element="tns:getFaqListResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="completeUser">
+<wsdl:part element="tns:completeUser" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getRestoreSession">
+<wsdl:part element="tns:getRestoreSession" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getCommerceResponse">
+<wsdl:part element="tns:getCommerceResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="setOTPLogin">
+<wsdl:part element="tns:setOTPLogin" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getUserCardsResponse">
+<wsdl:part element="tns:getUserCardsResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getCiudadesDane">
+<wsdl:part element="tns:getCiudadesDane" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="setCard2Receive">
+<wsdl:part element="tns:setCard2Receive" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="sendCreateEmailResponse">
+<wsdl:part element="tns:sendCreateEmailResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="deleteUserSessionResponse">
+<wsdl:part element="tns:deleteUserSessionResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="postPagoResponse">
+<wsdl:part element="tns:postPagoResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="validateOTP">
+<wsdl:part element="tns:validateOTP" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="sendOTPEmailResponse">
+<wsdl:part element="tns:sendOTPEmailResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="postPago">
+<wsdl:part element="tns:postPago" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getUserResponse">
+<wsdl:part element="tns:getUserResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="deleteUserResponse">
+<wsdl:part element="tns:deleteUserResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="deleteCard">
+<wsdl:part element="tns:deleteCard" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="validateOTPLoginResponse">
+<wsdl:part element="tns:validateOTPLoginResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getFavoriteCard">
+<wsdl:part element="tns:getFavoriteCard" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="createUser">
+<wsdl:part element="tns:createUser" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="validateUser">
+<wsdl:part element="tns:validateUser" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="sendOTPLoginEmailResponse">
+<wsdl:part element="tns:sendOTPLoginEmailResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getParameterByName">
+<wsdl:part element="tns:getParameterByName" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getParameterByNameResponse">
+<wsdl:part element="tns:getParameterByNameResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="setOTP">
+<wsdl:part element="tns:setOTP" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getCiudadesDaneResponse">
+<wsdl:part element="tns:getCiudadesDaneResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="activateCard">
+<wsdl:part element="tns:activateCard" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="updateTrxResponse">
+<wsdl:part element="tns:updateTrxResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="editCertificateResponse">
+<wsdl:part element="tns:editCertificateResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="restorePassword">
+<wsdl:part element="tns:restorePassword" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="findAllCertificates">
+<wsdl:part element="tns:findAllCertificates" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="findAllCertificatesResponse">
+<wsdl:part element="tns:findAllCertificatesResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="addFirstCard">
+<wsdl:part element="tns:addFirstCard" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getAuditActions">
+<wsdl:part element="tns:getAuditActions" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="createCommerceResponse">
+<wsdl:part element="tns:createCommerceResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="setCard2ReceiveResponse">
+<wsdl:part element="tns:setCard2ReceiveResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="setOTPLoginResponse">
+<wsdl:part element="tns:setOTPLoginResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="deleteUserSession">
+<wsdl:part element="tns:deleteUserSession" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="createCertificate">
+<wsdl:part element="tns:createCertificate" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="editCommerce">
+<wsdl:part element="tns:editCommerce" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getRestoreSessionResponse">
+<wsdl:part element="tns:getRestoreSessionResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="updateCardAliasResponse">
+<wsdl:part element="tns:updateCardAliasResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="sendOTPLoginEmail">
+<wsdl:part element="tns:sendOTPLoginEmail" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getAuditResponse">
+<wsdl:part element="tns:getAuditResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="setOTPResponse">
+<wsdl:part element="tns:setOTPResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="validateOTPResponse">
+<wsdl:part element="tns:validateOTPResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="authenticateUser">
+<wsdl:part element="tns:authenticateUser" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getUserCards">
+<wsdl:part element="tns:getUserCards" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getUserByDoc">
+<wsdl:part element="tns:getUserByDoc" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="activateCardResponse">
+<wsdl:part element="tns:activateCardResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="findCertificateByCodCommerceResponse">
+<wsdl:part element="tns:findCertificateByCodCommerceResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="createCertificateResponse">
+<wsdl:part element="tns:createCertificateResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getCommerceApiToken">
+<wsdl:part element="tns:getCommerceApiToken" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="pay">
+<wsdl:part element="tns:pay" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="addCardResponse">
+<wsdl:part element="tns:addCardResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="findCertificateByCodCommerce">
+<wsdl:part element="tns:findCertificateByCodCommerce" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getFavoriteCardResponse">
+<wsdl:part element="tns:getFavoriteCardResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="deleteCommerceResponse">
+<wsdl:part element="tns:deleteCommerceResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getCommerce">
+<wsdl:part element="tns:getCommerce" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="addFirstCardResponse">
+<wsdl:part element="tns:addFirstCardResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="deleteCertificate">
+<wsdl:part element="tns:deleteCertificate" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getFranchiseByBinRangeResponse">
+<wsdl:part element="tns:getFranchiseByBinRangeResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="addCard">
+<wsdl:part element="tns:addCard" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="deleteCardResponse">
+<wsdl:part element="tns:deleteCardResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="deleteCertificateResponse">
+<wsdl:part element="tns:deleteCertificateResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="setFavoriteCard">
+<wsdl:part element="tns:setFavoriteCard" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getUser">
+<wsdl:part element="tns:getUser" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="validateOTPLogin">
+<wsdl:part element="tns:validateOTPLogin" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="payResponse">
+<wsdl:part element="tns:payResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="editCommerceResponse">
+<wsdl:part element="tns:editCommerceResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="updateCardAlias">
+<wsdl:part element="tns:updateCardAlias" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="changePasswordResponse">
+<wsdl:part element="tns:changePasswordResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getFranchiseByBinRange">
+<wsdl:part element="tns:getFranchiseByBinRange" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="activateSessionResponse">
+<wsdl:part element="tns:activateSessionResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="setFavoriteCardResponse">
+<wsdl:part element="tns:setFavoriteCardResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getFaqList">
+<wsdl:part element="tns:getFaqList" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="restoreLinkPasswordResponse">
+<wsdl:part element="tns:restoreLinkPasswordResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="Exception">
+<wsdl:part element="tns:Exception" name="Exception"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="authenticateUserResponse">
+<wsdl:part element="tns:authenticateUserResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="changePassword">
+<wsdl:part element="tns:changePassword" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="validSession">
+<wsdl:part element="tns:validSession" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="completeUserResponse">
+<wsdl:part element="tns:completeUserResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="restoreLinkPassword">
+<wsdl:part element="tns:restoreLinkPassword" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="activateuser">
+<wsdl:part element="tns:activateuser" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="activateSession">
+<wsdl:part element="tns:activateSession" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="createUserResponse">
+<wsdl:part element="tns:createUserResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="createCommerce">
+<wsdl:part element="tns:createCommerce" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="updateTrx">
+<wsdl:part element="tns:updateTrx" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="activateuserResponse">
+<wsdl:part element="tns:activateuserResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:portType name="CheckoutWSService">
+<wsdl:operation name="deleteCommerce">
+<wsdl:input message="tns:deleteCommerce" name="deleteCommerce"> </wsdl:input>
+<wsdl:output message="tns:deleteCommerceResponse" name="deleteCommerceResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="updateRegisterDate">
+<wsdl:input message="tns:updateRegisterDate" name="updateRegisterDate"> </wsdl:input>
+<wsdl:output message="tns:updateRegisterDateResponse" name="updateRegisterDateResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="restorePassword">
+<wsdl:input message="tns:restorePassword" name="restorePassword"> </wsdl:input>
+<wsdl:output message="tns:restorePasswordResponse" name="restorePasswordResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="findAllCertificates">
+<wsdl:input message="tns:findAllCertificates" name="findAllCertificates"> </wsdl:input>
+<wsdl:output message="tns:findAllCertificatesResponse" name="findAllCertificatesResponse"> </wsdl:output>
+<wsdl:fault message="tns:Exception" name="Exception"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="sendCreateEmail">
+<wsdl:input message="tns:sendCreateEmail" name="sendCreateEmail"> </wsdl:input>
+<wsdl:output message="tns:sendCreateEmailResponse" name="sendCreateEmailResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="editCertificate">
+<wsdl:input message="tns:editCertificate" name="editCertificate"> </wsdl:input>
+<wsdl:output message="tns:editCertificateResponse" name="editCertificateResponse"> </wsdl:output>
+<wsdl:fault message="tns:Exception" name="Exception"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="addFirstCard">
+<wsdl:input message="tns:addFirstCard" name="addFirstCard"> </wsdl:input>
+<wsdl:output message="tns:addFirstCardResponse" name="addFirstCardResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getAuditActions">
+<wsdl:input message="tns:getAuditActions" name="getAuditActions"> </wsdl:input>
+<wsdl:output message="tns:getAuditActionsResponse" name="getAuditActionsResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getAudit">
+<wsdl:input message="tns:getAudit" name="getAudit"> </wsdl:input>
+<wsdl:output message="tns:getAuditResponse" name="getAuditResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="addAudit">
+<wsdl:input message="tns:addAudit" name="addAudit"> </wsdl:input>
+<wsdl:output message="tns:addAuditResponse" name="addAuditResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="updateUserData">
+<wsdl:input message="tns:updateUserData" name="updateUserData"> </wsdl:input>
+<wsdl:output message="tns:updateUserDataResponse" name="updateUserDataResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="deleteUserSession">
+<wsdl:input message="tns:deleteUserSession" name="deleteUserSession"> </wsdl:input>
+<wsdl:output message="tns:deleteUserSessionResponse" name="deleteUserSessionResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="sendOTPEmail">
+<wsdl:input message="tns:sendOTPEmail" name="sendOTPEmail"> </wsdl:input>
+<wsdl:output message="tns:sendOTPEmailResponse" name="sendOTPEmailResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="createCertificate">
+<wsdl:input message="tns:createCertificate" name="createCertificate"> </wsdl:input>
+<wsdl:output message="tns:createCertificateResponse" name="createCertificateResponse"> </wsdl:output>
+<wsdl:fault message="tns:Exception" name="Exception"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="editCommerce">
+<wsdl:input message="tns:editCommerce" name="editCommerce"> </wsdl:input>
+<wsdl:output message="tns:editCommerceResponse" name="editCommerceResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="sendOTPLoginEmail">
+<wsdl:input message="tns:sendOTPLoginEmail" name="sendOTPLoginEmail"> </wsdl:input>
+<wsdl:output message="tns:sendOTPLoginEmailResponse" name="sendOTPLoginEmailResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="deleteUser">
+<wsdl:input message="tns:deleteUser" name="deleteUser"> </wsdl:input>
+<wsdl:output message="tns:deleteUserResponse" name="deleteUserResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="completeUser">
+<wsdl:input message="tns:completeUser" name="completeUser"> </wsdl:input>
+<wsdl:output message="tns:completeUserResponse" name="completeUserResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="authenticateUser">
+<wsdl:input message="tns:authenticateUser" name="authenticateUser"> </wsdl:input>
+<wsdl:output message="tns:authenticateUserResponse" name="authenticateUserResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getUserCards">
+<wsdl:input message="tns:getUserCards" name="getUserCards"> </wsdl:input>
+<wsdl:output message="tns:getUserCardsResponse" name="getUserCardsResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getRestoreSession">
+<wsdl:input message="tns:getRestoreSession" name="getRestoreSession"> </wsdl:input>
+<wsdl:output message="tns:getRestoreSessionResponse" name="getRestoreSessionResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getUserByDoc">
+<wsdl:input message="tns:getUserByDoc" name="getUserByDoc"> </wsdl:input>
+<wsdl:output message="tns:getUserByDocResponse" name="getUserByDocResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getCommerceApiToken">
+<wsdl:input message="tns:getCommerceApiToken" name="getCommerceApiToken"> </wsdl:input>
+<wsdl:output message="tns:getCommerceApiTokenResponse" name="getCommerceApiTokenResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="pay">
+<wsdl:input message="tns:pay" name="pay"> </wsdl:input>
+<wsdl:output message="tns:payResponse" name="payResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="setOTPLogin">
+<wsdl:input message="tns:setOTPLogin" name="setOTPLogin"> </wsdl:input>
+<wsdl:output message="tns:setOTPLoginResponse" name="setOTPLoginResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="findCertificateByCodCommerce">
+<wsdl:input message="tns:findCertificateByCodCommerce" name="findCertificateByCodCommerce"> </wsdl:input>
+<wsdl:output message="tns:findCertificateByCodCommerceResponse" name="findCertificateByCodCommerceResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getCommerce">
+<wsdl:input message="tns:getCommerce" name="getCommerce"> </wsdl:input>
+<wsdl:output message="tns:getCommerceResponse" name="getCommerceResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getCiudadesDane">
+<wsdl:input message="tns:getCiudadesDane" name="getCiudadesDane"> </wsdl:input>
+<wsdl:output message="tns:getCiudadesDaneResponse" name="getCiudadesDaneResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="deleteCertificate">
+<wsdl:input message="tns:deleteCertificate" name="deleteCertificate"> </wsdl:input>
+<wsdl:output message="tns:deleteCertificateResponse" name="deleteCertificateResponse"> </wsdl:output>
+<wsdl:fault message="tns:Exception" name="Exception"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="setCard2Receive">
+<wsdl:input message="tns:setCard2Receive" name="setCard2Receive"> </wsdl:input>
+<wsdl:output message="tns:setCard2ReceiveResponse" name="setCard2ReceiveResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="addCard">
+<wsdl:input message="tns:addCard" name="addCard"> </wsdl:input>
+<wsdl:output message="tns:addCardResponse" name="addCardResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="validateOTP">
+<wsdl:input message="tns:validateOTP" name="validateOTP"> </wsdl:input>
+<wsdl:output message="tns:validateOTPResponse" name="validateOTPResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="setFavoriteCard">
+<wsdl:input message="tns:setFavoriteCard" name="setFavoriteCard"> </wsdl:input>
+<wsdl:output message="tns:setFavoriteCardResponse" name="setFavoriteCardResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getUser">
+<wsdl:input message="tns:getUser" name="getUser"> </wsdl:input>
+<wsdl:output message="tns:getUserResponse" name="getUserResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="postPago">
+<wsdl:input message="tns:postPago" name="postPago"> </wsdl:input>
+<wsdl:output message="tns:postPagoResponse" name="postPagoResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="validateOTPLogin">
+<wsdl:input message="tns:validateOTPLogin" name="validateOTPLogin"> </wsdl:input>
+<wsdl:output message="tns:validateOTPLoginResponse" name="validateOTPLoginResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="updateCardAlias">
+<wsdl:input message="tns:updateCardAlias" name="updateCardAlias"> </wsdl:input>
+<wsdl:output message="tns:updateCardAliasResponse" name="updateCardAliasResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getFranchiseByBinRange">
+<wsdl:input message="tns:getFranchiseByBinRange" name="getFranchiseByBinRange"> </wsdl:input>
+<wsdl:output message="tns:getFranchiseByBinRangeResponse" name="getFranchiseByBinRangeResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="deleteCard">
+<wsdl:input message="tns:deleteCard" name="deleteCard"> </wsdl:input>
+<wsdl:output message="tns:deleteCardResponse" name="deleteCardResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getFavoriteCard">
+<wsdl:input message="tns:getFavoriteCard" name="getFavoriteCard"> </wsdl:input>
+<wsdl:output message="tns:getFavoriteCardResponse" name="getFavoriteCardResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="createUser">
+<wsdl:input message="tns:createUser" name="createUser"> </wsdl:input>
+<wsdl:output message="tns:createUserResponse" name="createUserResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getFaqList">
+<wsdl:input message="tns:getFaqList" name="getFaqList"> </wsdl:input>
+<wsdl:output message="tns:getFaqListResponse" name="getFaqListResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="validateUser">
+<wsdl:input message="tns:validateUser" name="validateUser"> </wsdl:input>
+<wsdl:output message="tns:validateUserResponse" name="validateUserResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="changePassword">
+<wsdl:input message="tns:changePassword" name="changePassword"> </wsdl:input>
+<wsdl:output message="tns:changePasswordResponse" name="changePasswordResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="validSession">
+<wsdl:input message="tns:validSession" name="validSession"> </wsdl:input>
+<wsdl:output message="tns:validSessionResponse" name="validSessionResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getParameterByName">
+<wsdl:input message="tns:getParameterByName" name="getParameterByName"> </wsdl:input>
+<wsdl:output message="tns:getParameterByNameResponse" name="getParameterByNameResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="setOTP">
+<wsdl:input message="tns:setOTP" name="setOTP"> </wsdl:input>
+<wsdl:output message="tns:setOTPResponse" name="setOTPResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="restoreLinkPassword">
+<wsdl:input message="tns:restoreLinkPassword" name="restoreLinkPassword"> </wsdl:input>
+<wsdl:output message="tns:restoreLinkPasswordResponse" name="restoreLinkPasswordResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="activateuser">
+<wsdl:input message="tns:activateuser" name="activateuser"> </wsdl:input>
+<wsdl:output message="tns:activateuserResponse" name="activateuserResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="activateSession">
+<wsdl:input message="tns:activateSession" name="activateSession"> </wsdl:input>
+<wsdl:output message="tns:activateSessionResponse" name="activateSessionResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="createCommerce">
+<wsdl:input message="tns:createCommerce" name="createCommerce"> </wsdl:input>
+<wsdl:output message="tns:createCommerceResponse" name="createCommerceResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="updateTrx">
+<wsdl:input message="tns:updateTrx" name="updateTrx"> </wsdl:input>
+<wsdl:output message="tns:updateTrxResponse" name="updateTrxResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="activateCard">
+<wsdl:input message="tns:activateCard" name="activateCard"> </wsdl:input>
+<wsdl:output message="tns:activateCardResponse" name="activateCardResponse"> </wsdl:output>
+</wsdl:operation>
+</wsdl:portType>
+<wsdl:binding name="CheckoutWSServiceServiceSoapBinding" type="tns:CheckoutWSService">
+<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+<wsdl:operation name="deleteCommerce">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="deleteCommerce">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="deleteCommerceResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="updateRegisterDate">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="updateRegisterDate">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="updateRegisterDateResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="restorePassword">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="restorePassword">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="restorePasswordResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="findAllCertificates">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="findAllCertificates">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="findAllCertificatesResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+<wsdl:fault name="Exception">
+<soap:fault name="Exception" use="literal"/>
+</wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="sendCreateEmail">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="sendCreateEmail">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="sendCreateEmailResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="editCertificate">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="editCertificate">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="editCertificateResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+<wsdl:fault name="Exception">
+<soap:fault name="Exception" use="literal"/>
+</wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="getAuditActions">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="getAuditActions">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getAuditActionsResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="addFirstCard">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="addFirstCard">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="addFirstCardResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getAudit">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="getAudit">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getAuditResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="updateUserData">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="updateUserData">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="updateUserDataResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="addAudit">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="addAudit">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="addAuditResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="deleteUserSession">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="deleteUserSession">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="deleteUserSessionResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="sendOTPEmail">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="sendOTPEmail">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="sendOTPEmailResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="createCertificate">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="createCertificate">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="createCertificateResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+<wsdl:fault name="Exception">
+<soap:fault name="Exception" use="literal"/>
+</wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="editCommerce">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="editCommerce">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="editCommerceResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="sendOTPLoginEmail">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="sendOTPLoginEmail">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="sendOTPLoginEmailResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="deleteUser">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="deleteUser">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="deleteUserResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="completeUser">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="completeUser">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="completeUserResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getUserCards">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="getUserCards">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getUserCardsResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="authenticateUser">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="authenticateUser">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="authenticateUserResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getRestoreSession">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="getRestoreSession">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getRestoreSessionResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getUserByDoc">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="getUserByDoc">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getUserByDocResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getCommerceApiToken">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="getCommerceApiToken">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getCommerceApiTokenResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="pay">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="pay">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="payResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="setOTPLogin">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="setOTPLogin">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="setOTPLoginResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="findCertificateByCodCommerce">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="findCertificateByCodCommerce">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="findCertificateByCodCommerceResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getCommerce">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="getCommerce">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getCommerceResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getCiudadesDane">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="getCiudadesDane">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getCiudadesDaneResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="deleteCertificate">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="deleteCertificate">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="deleteCertificateResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+<wsdl:fault name="Exception">
+<soap:fault name="Exception" use="literal"/>
+</wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="setCard2Receive">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="setCard2Receive">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="setCard2ReceiveResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="addCard">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="addCard">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="addCardResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="validateOTP">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="validateOTP">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="validateOTPResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="setFavoriteCard">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="setFavoriteCard">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="setFavoriteCardResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getUser">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="getUser">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getUserResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="postPago">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="postPago">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="postPagoResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="validateOTPLogin">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="validateOTPLogin">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="validateOTPLoginResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="updateCardAlias">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="updateCardAlias">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="updateCardAliasResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getFranchiseByBinRange">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="getFranchiseByBinRange">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getFranchiseByBinRangeResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="deleteCard">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="deleteCard">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="deleteCardResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getFavoriteCard">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="getFavoriteCard">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getFavoriteCardResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="createUser">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="createUser">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="createUserResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getFaqList">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="getFaqList">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getFaqListResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="validateUser">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="validateUser">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="validateUserResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="changePassword">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="changePassword">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="changePasswordResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="validSession">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="validSession">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="validSessionResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getParameterByName">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="getParameterByName">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getParameterByNameResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="setOTP">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="setOTP">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="setOTPResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="restoreLinkPassword">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="restoreLinkPassword">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="restoreLinkPasswordResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="activateuser">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="activateuser">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="activateuserResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="activateSession">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="activateSession">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="activateSessionResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="createCommerce">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="createCommerce">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="createCommerceResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="updateTrx">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="updateTrx">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="updateTrxResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="activateCard">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="activateCard">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="activateCardResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+</wsdl:binding>
+<wsdl:service name="CheckoutWSServiceService">
+<wsdl:port binding="tns:CheckoutWSServiceServiceSoapBinding" name="CheckoutWSServicePort">
+<soap:address location="http://localhost:9084/CheckOutWSWeb/CheckoutWSService"/>
+</wsdl:port>
+</wsdl:service>
+</wsdl:definitions>
